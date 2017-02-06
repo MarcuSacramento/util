@@ -1,0 +1,37 @@
+3.1 Desenho de Arquitetura Técnica
+
+Comece por ter bem claro os elementos da arquitetura atual e futura:
+
+    Servidores e seus papéis (onde estão, como acessá-los, para que servem)
+    Bancos de dados (onde estão, como acessá-los, para que servem, dicionário de dados, estatísticas de uso, etc)
+    Conexões físicas (endereços de IP, rotas, portas necessárias, firewalls, VPN's, etc)
+    Integrações (lista de interfaces, tipo [serviço/aplicação, banco de dados, webservice], forma de disparo, intermitência, latência, dicionário de dados envolvido, regras de negócio, tratamento de excessões). Aliás as interfaces costumam ser a parte mais negligenciada em projetos de migração e a mais problemática no pós-migração.  Farei um artigo sobre isso futuramente. Faça seu dever de casa, levante isso MUITO BEM.
+
+3.2 Dados que precisam ser migrados
+
+É preciso decidir que dados serão levados para o novo sistema. Parece algo simples de se resolver, mas não é, pois envolve muitos fatores que precisam ser considerados:
+
+A real necessidade de dados antigos no sistema novo. Se o sistema antigo vai permanecer para ser consultado ou para extrair informações históricas, considere a oportunidade de "sanear" as informações que irão para o novo sistema. Por exemplo, qual a real necessidade de levar endereços antigos e inativos de um cliente para o novo sistema? Histórico de compras de mais de 1 ano? Produtos do estoque que foram descontinuados?  Logs de transações antigas?
+
+Porém devido à chamada "normalização" de dados, para manter a integridade dos dados históricos você corre o risco de ter que migrar mais dados do que gostaria. Este "recorte" é algo que demandará uma análise que consumirá tempo e recursos especializados, dependendo da complexidade e "amarrações" do banco de dados do sistema anterior. Mas vale a pena ser feita.
+
+Um outro aspecto importante é a qualidade dos dados. Muitas vezes é necessário tratá-los antes de poder migrá-los. Infelizmente alguns sistemas permitem inconsistências que ao serem migradas vão "dar pau" na migração para o novo banco de dados. Será preciso mais do que fazer um "de-para", é preciso validar se os dados tem a consistência necessária para serem migrados. Talvez seja necessário "enxertar" ou transformar informações na migração, ou ainda corrigir a base cadastral antes de poder migrá-la. Identifique isso CEDO, para ter tempo de tratar isso adequadamente durante o projeto.
+
+
+
+    Planejamento da estratégia
+    Avaliação dos requisitos / arquiteturas / infraestrutura
+    Aquisição e disponibilização da infraestrutura necessária (servidores, bancos de dados, sala de guerra, sala de testes, e rollout de desktops / impressoras novas caso necessário)
+    Montagem dos ambientes de desenvolvimento, testes, homologação e produção (novo) e ajustes na rede de dados
+    Engajamento das equipes necessárias (quem e por quanto tempo você precisará contar)
+    Tratamento dos dados de origem (saneamento, correção, scripts de "enxerto" ou transformação)
+    Definição e parametrização das novas regras de negócio, incluindo perfis de usuários e permissionamento
+    Datas para testes e simulações da migração
+    Treinamento e capacitação de usuários
+
+
+        Qualidade de Dados mínima aceitável (quantitativo e qualitativo)
+        Desempenho dos processos críticos (tempo de execução e facilidade)
+        Documentação técnica (nível de detalhamento para manutenção e administração)
+        Documentação para o usuário (material de treinamento e manuais)
+        Janela máxima aceitável para migração

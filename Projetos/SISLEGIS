@@ -1,0 +1,40 @@
+$ wget 'http://legis.senado.leg.br/dadosabertos/materia/pesquisa/lista?v=4&sigla=PLS&numero=309&ano=2016'
+--2017-01-31 12:11:05--  http://legis.senado.leg.br/dadosabertos/materia/pesquisa/lista?v=4&sigla=PLS&numero=309&ano=2016
+Resolving legis.senado.leg.br... 201.54.48.132
+Connecting to legis.senado.leg.br|201.54.48.132|:80...
+
+
+$ wget 'http://legis.senado.leg.br/dadosabertos/materia/pesquisa/lista?v=4&sigla=PL&numero=20&ano=2015'
+--2017-01-31 12:12:45--  http://legis.senado.leg.br/dadosabertos/materia/pesquisa/lista?v=4&sigla=PL&numero=20&ano=2015
+Resolving legis.senado.leg.br... 201.54.48.132
+Connecting to legis.senado.leg.br|201.54.48.132|:80... failed: Connection timed out.
+Retrying.
+
+
+
+[DSV SISLEGIS] SOLICITAÇÃO DE LIBERAÇÃO/CRIAÇãO DE ROTA/CONEXÃO
+
+A equipe de rede/produção
+
+Favor realizar a liberação de regras para comunicação entro o IP 10.10.4.41 do usuário usuario_origem aos destinos:
+Servidor/Máquina:legis.senado.leg.br(201.54.48.132)
+Porta(s):80
+Justificativa:Recuperação de dados da base do senado via serviço REST
+
+Servidor/Máquina:www.camara.gov.br(200.219.133.59)
+Porta(s):80
+Justificativa:Recuperação de dados da base do senado via serviço WSDL
+
+
+/home/sislegis/sislegis-ambiente/projetos/app/target/sislegis.war
+
+
+/home/sislegis/sislegis-ambiente/ferramentas/jboss/standalone/deployments
+
+http://dsv.sislegis.mj.gov.br/sislegis/rest/proposicaos/24500?ano=2016&numero=00309&origem=SENADO&sigla=PLS+00309%2F2016
+
+
+142762 Liberação de Rede para o sftp da CGU
+
+
+ogumj/mj5068

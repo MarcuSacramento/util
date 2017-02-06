@@ -1,6 +1,3 @@
-REDMINE 4943 - Apoio na implantação do TFS na CGSIS #Atendendo
-REDMINE 4819 - Treinamento GIT para a CGSIS #Paralisado
-
 Atividades para o Projeto VSTS
 
 Objetivo da demanda: Executar aplicações HelloWorld para as tecnologias JAVA, ASP Clássico, .NET, PHP para os ambientes de Desenvolvimento, Teste, Homologação e Produção utilizando a ferramenta Visual Studio Team Server no controle de Histórias de usuário, fluxo de desenvolvimento utilizando o git, práticas ágeis como Integração Contínua e Deploy Contínuo.
@@ -10,6 +7,9 @@ Atividades que compõem a Demanda:
 1. Construção de Aplicações HelloWorld - 28h
   1.1. Definição de Git Flow para atendimento a demandas pelo desenvolvedor - 16h
   1.2. Criação das aplicações HelloWorld para Prova de conceito do Git Flow e Uso na Configuração da Ferramenta VSTS - 12h
+        Criado Hello World Java - http://git.mj.gov.br/marcus.sacramento/hello-java
+        Criado Hello World PHP - http://git.mj.gov.br/marcus.sacramento/hello-php
+
 2. Estudo da Configuração do VSTS para projetos - 47h
   2.1. Criação dos Projetos, Perfis e configuração das ferramentas envolvidas - 32h
   2.2. Execução de Histórias e Tarefas, além de utilização do git flow para validação do uso da ferramenta e suas necessidades - 15h
