@@ -1,8 +1,6 @@
-REDMINE [][5045]Criação de build pipeline e provisionamento de ambiente para o projeto E-OUV CGU
-REDMINE [06/02/2017][5045]Criação de build pipeline e provisionamento de ambiente para o projeto E-OUV CGU
-REDMINE [06/02/2017][5061]SINCA Schedule - Criação do Repositório GIT
-REDMINE [07/02/2017][4701]Envio de mensagens automáticas para os todos os membros
-REDMINE [08/02/2017][5071]Avaliação ambiente de homologação SISTEMA DE CONTROLE DE VIISTANTE
-REDMINE [10/02/2017][5047]Verificação dos ambientes início 08/02/17 Fim
-REDMINE [16/02/2017][4989]Absorção SISLEGIS - Trilhas Jenkins – início 10/02/2017 Fim
-REDMINE [31/01/2017][5075]Análise da aplicação SISLEGIS - demanda priorizada com urgência para dia 31/01/2017
+REDMINE [2][20-02][5117]Repasse SISLEGIS - inicio 08/02/2017 - Paralisada aguardando a demanda
+REDMINE [1][16-02][4989]Absorção SISLEGIS - Trilhas Jenkins – início 10/02/2017 Fim
+REDMINE [3][09-02][5045]Criação de build pipeline e provisionamento de ambiente para o projeto E-OUV CGU #Finalizar
+REDMINE [4][15-02][5071]Avaliação ambiente de homologação SISTEMA DE CONTROLE DE VISITANTE
+REDMINE [5][17-02][5047]Verificação dos ambientes
+REDMINE [6][17-02][4949]incluir o sistema SICAU na Integração Contínua 
