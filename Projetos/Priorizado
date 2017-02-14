@@ -1,6 +1,26 @@
-REDMINE [2][20-02][5117]Repasse SISLEGIS - inicio 08/02/2017 - Paralisada aguardando a demanda
-REDMINE [1][16-02][4989]Absorção SISLEGIS - Trilhas Jenkins – início 10/02/2017 Fim
-REDMINE [3][09-02][5045]Criação de build pipeline e provisionamento de ambiente para o projeto E-OUV CGU #Finalizar
-REDMINE [4][15-02][5071]Avaliação ambiente de homologação SISTEMA DE CONTROLE DE VISITANTE
-REDMINE [5][17-02][5047]Verificação dos ambientes
-REDMINE [6][17-02][4949]incluir o sistema SICAU na Integração Contínua 
+Priorizado:
+☐ REDMINE [1][16-02][4989]Absorção SISLEGIS - Trilhas Jenkins – início 10/02/2017 Fim
+☐ REDMINE [2][20-02][5117]Repasse SISLEGIS - inicio 08/02/2017 - Paralisada aguardando a demanda
+☐ REDMINE [4][15-02][5071]Avaliação ambiente de homologação SISTEMA DE CONTROLE DE VISITANTE
+☐ REDMINE [5][17-02][5047]Verificação dos ambientes
+☐ REDMINE [6][17-02][4949]incluir o sistema SICAU na Integração Contínua
+
+
+
+A Priorizar:
+☐ [4905] [Sustentação] Incluir o sistema MJ Estrangeiro Web na Integração Contínua -
+☐ [4949] Sustentação] Incluir o sistema SICAU na Integração Contínua
+☐ [5111] Implementar integração contínua COMP-DRCI
+☐ [5129] [Sustentação] Apoio para Atualização do Estrangeiro Web Produção - SATI 137360
+☐ [5115] Sustentação] Problema em Produção do COMP-DRCI - HML X PRD
+☐ [4481] Elaborar processo de gestão de configuração para os portais
+☐ [4383] Sustentação - Criar Plano de Implantação - Portal Sinesp
+☐ [4995] apoio para atualização e consolidação da planilha de Sistemas
+☐ [4027] "Limpeza" dos repositório do Git
+☐ [4819] Treinamento GIT para a CGSIS
+☐ [4821] Treinamento INTEGRAÇÃO CONTÍNUA para a CGSIS
+☐ [4549] Apoio aos ambientes do SEI
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+  ✔ REDMINE [3][09-02][5045]Criação de build pipeline e provisionamento de ambiente para o projeto E-OUV CGU @done(2017-02-14 10:29)
