@@ -1,0 +1,11 @@
+SATI 145117 Replicação de ambiente de produção
+SATI 145983 Acesso ao Servidor:
+SATI 146556 Criação do Ambiente de Teste
+SATI 146561 Criação do Ambiente de Homologação
+
+Servidor: 10.10.4.47
+Usuário: usr-dsv-mj ( usuário sudo)
+Senha: mj@fabrica
+Porta: 22
+
+http://artifactory.mj.gov.br/artifactory/tools/br.gov.mj/sislegis/keycloak/sislegis-keycloak-server.tar

@@ -1,3 +1,9 @@
+find -type f | xargs grep 'http://sislegis'
+netstat -tulpn | grep :9990
+$ ps -aux | grep 2318
+
+======================================================================================
+
 Initialize
 git flow init [-fd]
 

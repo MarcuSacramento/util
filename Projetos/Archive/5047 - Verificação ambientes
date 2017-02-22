@@ -1,0 +1,25 @@
+SVCPP
+  Levantamento de Datasources:
+    DSV:
+    TST:
+    HML:
+    PRD:
+
+
+CONARE
+
+
+CORPMJ
+
+SGDRCI (DRCI COOPERA).
+
+
+/profile=ha/subsystem=datasources/data-source=svcpp-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=conare-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=corpmj-restDS:read-resource
+/profile=ha/subsystem=datasources/data-source=sgdrci-webDS:read-resource
+
+
+-*.html|-*.css|-*.js|-*.xsl|-*.hash|-*.jsp
+{"operation":"read-resource","address":[{"profile":"ha"},{"subsystem":"datasources"},{"data-source":"svcpp-webDS"}]}
+{"operation":"read-attribute","name":"server-state","address":["host","tstlxwf01","server","carros-web"]}
