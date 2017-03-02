@@ -1,13 +1,10 @@
 Priorizado:
-☐ REDMINE [1][16-02][4989]Absorção SISLEGIS - Trilhas Jenkins – início 10/02/2017 Fim
-☐ REDMINE [2][20-02][5117]Repasse SISLEGIS - inicio 08/02/2017 - Paralisada aguardando a demanda
-☐ REDMINE [3][23-02][5111]Implementar integração contínua COMP-DRCI
-☐ REDMINE [4][03-03][5115]Sustentação] Problema em Produção do COMP-DRCI - HML X PRD
+☐ REDMINE [1][16-02][4989]Absorção SISLEGIS - Trilhas Jenkins – início 10/02/2017 Fim @timestamp(2017-03-02 14:06)
+☐ [4949] Sustentação] Incluir o sistema SICAU na Integração Contínua @inicio(2017-03-02 14:13) @timestamp(2017-03-02 14:14)
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 A Priorizar:
 ☐ [4905] [Sustentação] Incluir o sistema MJ Estrangeiro Web na Integração Contínua
-☐ [4949] Sustentação] Incluir o sistema SICAU na Integração Contínua
 ☐ [4481] Elaborar processo de gestão de configuração para os portais
 ☐ [4383] Sustentação - Criar Plano de Implantação - Portal Sinesp
 ☐ [4027] "Limpeza" dos repositório do Git
@@ -16,10 +13,14 @@ A Priorizar:
 ☐ [4549] Apoio aos ambientes do SEI
 ☐ [4995] apoio para atualização e consolidação da planilha de Sistemas
 ☐ [5001] Sistemas de ligações: configurações necessárias no âmbito do projeto da aplicação swing
+☐ [5171] Implementar Integração Continua - COMP-MJ-CORPORATIVO
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ REDMINE [3][23-02][5111]Implementar integração contínua COMP-DRCI @done(2017-03-01 14:59)
+  ✔ REDMINE [4][03-03][5115]Sustentação] Problema em Produção do COMP-DRCI - HML X PRD @timestamp(2017-02-22 12:18) @done(2017-02-23 20:02)
+  ✔ REDMINE [2][20-02][5117]Repasse SISLEGIS - inicio 08/02/2017 - Paralisada aguardando a demanda @done(2017-02-23 17:47)
   ✔ REDMINE [1][20-02][5149]Conflito de Merge-request - Testes SINCA @done(2017-02-22 11:34)
   ✔ REDMINE [1][15-02][5145]Atualização no envio de mensagens via Jenkins @done(2017-02-20 18:25)
   ✔ REDMINE [5][17-02][5047]Verificação dos ambientes @timestamp(2017-02-14 14:56) @done(2017-02-20 18:24)
