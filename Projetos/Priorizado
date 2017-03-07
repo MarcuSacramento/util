@@ -1,20 +1,25 @@
 Priorizado:
 ☐ REDMINE [1][16-02][4989]Absorção SISLEGIS - Trilhas Jenkins – início 10/02/2017 Fim @timestamp(2017-03-02 14:06)
-☐ [4949] Sustentação] Incluir o sistema SICAU na Integração Contínua @inicio(2017-03-02 14:13) @timestamp(2017-03-02 14:14)
-
+✔ REDMINE [2][01-03][4949]Incluir o sistema SICAU na Integração Contínua @inicio(2017-03-02 14:13) @timestamp(2017-03-02 14:14) @done(2017-03-06 15:41)
+☐ REDMINE [3][07-03][5199]Storage Configuração de Variáveis
+☐ REDMINE [3][07-03][5203]Conflito de merge req. - SINCA - master p/ stable
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 A Priorizar:
-☐ [4905] [Sustentação] Incluir o sistema MJ Estrangeiro Web na Integração Contínua
-☐ [4481] Elaborar processo de gestão de configuração para os portais
-☐ [4383] Sustentação - Criar Plano de Implantação - Portal Sinesp
-☐ [4027] "Limpeza" dos repositório do Git
-☐ [4819] Treinamento GIT para a CGSIS
-☐ [4821] Treinamento INTEGRAÇÃO CONTÍNUA para a CGSIS
-☐ [4549] Apoio aos ambientes do SEI
-☐ [4995] apoio para atualização e consolidação da planilha de Sistemas
-☐ [5001] Sistemas de ligações: configurações necessárias no âmbito do projeto da aplicação swing
-☐ [5171] Implementar Integração Continua - COMP-MJ-CORPORATIVO
 
+☐ [5201]Análise do novo recebimento de informações do SinespJC;
+☐ [5207][Sustentação] Cópia do JBOSS - ClassindWeb - DSV -> TST (p/ testar problema de download de PDF);
+☐ [5205][Sustentação] Inclusão do SINCA Scheduler no Java Jenkins;
+☐ [5171]Implementar integração contínua COMP-MJ-CORPORATIVO;
+☐ [5183]Verificação de ambiente de todas as aplicações MJ;
+☐ [4905][Sustentação] Incluir o sistema MJ Estrangeiro Web na Integração Contínua - Aguardando o VSTS
+☐ [4481]Elaborar processo de gestão de configuração para os portais
+☐ [4383]Sustentação - Criar Plano de Implantação - Portal Sinesp
+☐ [4027]Limpeza" do s repositório do Git
+☐ [4819]Treinamento GIT para a CGSIS
+☐ [4821]Treinamento INTEGRAÇÃO CONTÍNUA para a CGSIS
+☐ [4549]Apoio aos ambientes do SEI.
+☐ [4995]Apoio para atualização e consolidação da planilha de Sistemas;
+☐ [5001]Sistemas de ligações:  configurações necessárias no âmbito do projeto da aplicação swing;
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
@@ -32,3 +37,8 @@ Archive:
 
 
 146464
+148293
+148365
+
+
+https://github.com/brettwooldridge/HikariCP/issues/599
