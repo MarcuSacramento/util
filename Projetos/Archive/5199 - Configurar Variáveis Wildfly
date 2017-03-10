@@ -1,0 +1,45 @@
+
+
+
+/host=dsvlxwf01/server=storagemj-rest/subsystem=datasources/data-source=storagemj-restDS/statistics=pool:read-resource(include-runtime=true)
+/host=dsvlxwf01/server=storagemj-rest/subsystem=datasources/data-source=storagemj-restDS/:flush-all-connection-in-pool
+/host=dsvlxwf01/server=storagemj-rest/core-service=platform-mbean/type=runtime:read-attribute(name=system-properties,include-defaults=true)
+
+A equipe de Produção:
+Favor providenciar a criação dos seguintes DNS's para as aplicação CORP-MJ e STORAGE-MJ
+* CORP-MJ: corpmj.mjgov.br para o servidor de produção wildfly 8.2.1 consolidado apontando para a aplicação corpmj conforme o ambiente de DSV(dsv.corpmj.mj.gov.br), TST(tst.corpmj.mj.gov.br) e HML(hml.corpmj.mj.gov.br)
+* STORAGE-MJ: storagemj.mj.gov.br para o servidor de produção wildfly 8.2.1 consolidado apontando para a aplicação storagemj-rest conforme o ambiente de DSV(dsv.storagemj.mj.gov.br), TST(tst.storagemj.mj.gov.br) e HML(hml.storagemj.mj.gov.br)
+
+Após criação do DNS favor configurar o servidor de aplicação Wildfly para os ambientes de teste, homologação e produção conforme configurações a seguir e orientação anexo:
+
+Ambiente de Teste:
+       "corpmj.contexto" => "corpmj",
+       "corpmj.porta" => "80",
+       "corpmj.protocolo" => "http",
+       "corpmj.url" => "tst.corpmj.mj.gov.br",
+       "storagemj.contexto" => "storagemj-rest",
+       "storagemj.porta" => "80",
+       "storagemj.protocolo" => "http",
+       "storagemj.url" => "tst.storagemj.mj.gov.br"
+
+Ambiente de Homologação:
+        "corpmj.contexto" => "corpmj",
+        "corpmj.porta" => "80",
+        "corpmj.protocolo" => "http",
+        "corpmj.url" => "hml.corpmj.mj.gov.br",
+        "storagemj.contexto" => "storagemj-rest",
+        "storagemj.porta" => "80",
+        "storagemj.protocolo" => "http",
+        "storagemj.url" => "hml.storagemj.mj.gov.br"
+
+Ambiente de Produção:
+        "corpmj.contexto" => "corpmj",
+        "corpmj.porta" => "80",
+        "corpmj.protocolo" => "http",
+        "corpmj.url" => "corpmj.mj.gov.br",
+        "storagemj.contexto" => "storagemj-rest",
+        "storagemj.porta" => "80",
+        "storagemj.protocolo" => "http",
+        "storagemj.url" => "storagemj.mj.gov.br"
+
+Chamado 148986

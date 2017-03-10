@@ -14,6 +14,7 @@ Servidor: 10.10.4.47
 Usuário: usr-dsv-mj ( usuário sudo)
 Senha: mj@fabrica
 Porta: 22
+ssh usr-dsv-mj@10.10.4.47
 
 Teste:
 Servidor: 10.10.8.45 sr-dflxapt045
@@ -35,3 +36,5 @@ export APP_HOST="tst.sislegis.mj.gov.br"
 export APP_IP="10.10.8.45"
 export PWD="/home/sislegis"
 export OLDPWD="/home/usr-dsv-mj"
+
+package -Pdev-mj
