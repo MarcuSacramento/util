@@ -1,0 +1,43 @@
+SVCPP
+  Levantamento de Datasources:
+    DSV:
+    TST:
+    HML:
+    PRD:
+
+
+CONARE
+
+
+CORPMJ
+
+SGDRCI (DRCI COOPERA).
+
+
+/profile=ha/subsystem=datasources/data-source=cadupl-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=conare-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=corpmj-restDS:read-resource
+/profile=ha/subsystem=datasources/data-source=sgdrci-webDS:read-resource
+
+
+-*.html|-*.css|-*.js|-*.xsl|-*.hash|-*.jsp
+{"operation":"read-resource","address":[{"profile":"ha"},{"subsystem":"datasources"},{"data-source":"svcpp-webDS"}]}
+{"operation":"read-attribute","name":"server-state","address":["host","tstlxwf01","server","carros-web"]}
+
+
+/profile=ha/subsystem=datasources/data-source=cadupl-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=conare-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=corpmj-restDS:read-resource
+/profile=ha/subsystem=datasources/data-source=gfunad-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=oscip-ipea-restDS:read-resource
+/profile=ha/subsystem=datasources/data-source=side-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=storagemj-restDS:read-resource
+/profile=ha/subsystem=datasources/data-source=tema3DS:read-resource
+/profile=ha/subsystem=datasources/data-source=atlasDS:read-resource
+/profile=ha/subsystem=datasources/data-source=carros-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=coopera-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=eouv-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=mci-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=sgdrci-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=sinape-webDS:read-resource
+/profile=ha/subsystem=datasources/data-source=svcpp-webDS:read-resource

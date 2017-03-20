@@ -1,6 +1,4 @@
 
-
-
 /host=dsvlxwf01/server=storagemj-rest/subsystem=datasources/data-source=storagemj-restDS/statistics=pool:read-resource(include-runtime=true)
 /host=dsvlxwf01/server=storagemj-rest/subsystem=datasources/data-source=storagemj-restDS/:flush-all-connection-in-pool
 /host=dsvlxwf01/server=storagemj-rest/core-service=platform-mbean/type=runtime:read-attribute(name=system-properties,include-defaults=true)
@@ -42,4 +40,21 @@ Ambiente de Produção:
         "storagemj.protocolo" => "http",
         "storagemj.url" => "storagemj.mj.gov.br"
 
+
+
+Ambiente de Homologação:
+        "sei.wsdl.link" => "http://sei.teste.mj.gov.br/sei/ws/SeiWS.php","
+        "sei.wsdl.name" => "SeiPortService"
+        "sei.wsdl.namespace" => "Sei"
+        "sei.wsdl.service" => "SeiService"
+
+Ambiente de Homologação:
+        "sei.wsdl.link" => "http://sei.mj.gov.br/sei/ws/SeiWS.php","
+        "sei.wsdl.name" => "SeiPortService"
+        "sei.wsdl.namespace" => "Sei"
+        "sei.wsdl.service" => "SeiService"
+
+
+
 Chamado 148986
+Chamado 151272 
