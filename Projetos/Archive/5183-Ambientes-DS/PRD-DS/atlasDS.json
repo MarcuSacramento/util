@@ -1,0 +1,9 @@
+{
+    "outcome" : "failed",
+    "failure-description" : "JBAS014807: Management resource '[
+    (\"profile\" : \"ha\"),
+    (\"subsystem\" : \"datasources\"),
+    (\"data-source\" : \"atlasDS\")
+]' not found",
+    "rolled-back" : true
+}

@@ -1,0 +1,109 @@
+atlas-web
+Allocation Retry
+Background Validation
+Pool Size
+Prepared Statement
+Usuários de Banco
+
+cadupl-web
+Allocation Retry
+Initial Pool Size
+Pool Size
+Usuários de Banco
+Nome do Banco da Aplicação
+
+carros-web
+Allocation Retry
+Backgroud Validation/Blocking Timeout Wait
+Idle Timeout/Initial Pool Size
+Pool Size
+Pool Prefil
+Prepared Statements Cache/Query Timeout
+Share Prepared Statements
+Use Try lock/Usuário do Banco
+Nome do Banco da Aplicação
+
+conare-web
+Allocation Retry
+Backgroud Validation/Blocking Timeout Wait
+Idle Timeout/Initial Pool Size
+Pool Size
+Pool Prefil
+Prepared Statements Cache/Query Timeout
+Share Prepared Statements
+Use Try lock/Usuário do Banco
+
+coopera-web
+Usuário do Banco
+
+eouv-web
+Allocation Retry
+Backgroud Validation/Blocking Timeout Wait
+Idle Timeout
+Pool Size
+Prepared Statements Cache/Query Timeout
+Share Prepared Statements
+Use Try lock
+
+gfunad-web
+Allocation Retry
+Backgroud Validation/Blocking Timeout Wait
+Check Connection SQL
+Idle Timeout/Initial Pool Size
+Poll Size
+Prepared Statements Cache/Query Timeout
+Share Prepared Statements
+Use Try lock/User Name
+
+mci-web
+Allocation Retry
+Initial Pool Size
+Poll Size
+Pool Prefil
+User Name
+
+oscip-ipea-rest
+Background Validation
+Valid Connection SQL
+Poll Size
+User Name
+
+sgdrci-web
+Allocation Retry
+Backgroud Validation/Blocking Timeout Wait
+Check Connection SQL
+Initial Pool Size
+Poll Size/New Connection SQL/Pool Prefill
+Prepared Statements Cache
+Share Prepared Statements
+User Name
+
+side-web
+Allocation Retry
+Backgroud Validation/Blocking Timeout Wait
+Check Connection SQL
+Idle Timeout/Initial Pool Size
+Poll Size
+Prepared Statements Cache/Query Timeout
+Share Prepared Statements
+Use Try Lock/User Name
+
+sinape-web
+Poll Size
+
+storagemj-web
+Allocation Retry
+Backgroud Validation/Blocking Timeout Wait
+Check Connection SQL
+Idle Timeout/Initial Pool Size
+Pool Size
+Pool Prefil
+Prepared Statements Cache/Query Timeout
+Share Prepared Statements
+Use Try lock
+
+svcpp-web
+Allocation Retry
+Initial Pool Size
+Pool Size
+Pool Prefil

@@ -1,0 +1,5 @@
+{
+    "outcome" : "failed",
+    "failure-description" : "JBAS014807: Management resource '[(profile : ha),(subsystem : datasources),(data-source : corpmj-restDS)]' not found",
+    "rolled-back" : true
+}
