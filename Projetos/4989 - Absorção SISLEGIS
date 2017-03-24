@@ -8,6 +8,7 @@ SATI 148173 Liberação de acesso a homologação
 SATI 147599 Replicação de regras de rede
 SATI 148848 Solicitação de Backup de war
 SATI 148850 Liberação de rede e DNS para console
+SATI 152066 Liberação de rede para download de pacotes Bower
 
 Desenvolvimento:
 Servidor: 10.10.4.47
@@ -38,3 +39,15 @@ export PWD="/home/sislegis"
 export OLDPWD="/home/usr-dsv-mj"
 
 package -Pdev-mj
+
+
+
+A equipe de Produção,
+
+favor verificar as permissões do usuário Jenkins do ambiente java.jenkins.
+é necessário executar a construção de projetos em NodeJS, no entanto não está sendo possível devido as permissões do usuário jenkins
+
+
+
+npm install bower@1.8.0
+npm install gulp@3.9.1
