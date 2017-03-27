@@ -1,9 +1,10 @@
 # Redmine 5115
+
 ## Problema em Produção do COMP-DRCI - HML X PRD
 
 **Problema:**
 
-> Por gentileza, emitir parecer técnico para o caso referente ao SATI 143553 e o 144529\. Ao subirmos o deploy para produção através do sati 143553 , o sistema gerou o incidente que gerou sati 144529\.
+> Por gentileza, emitir parecer técnico para o caso referente ao SATI 143553 e o 144529\. Ao subirmos o deploy para produção através do sati 143553 , o sistema gerou o incidente que gerou sati 144529.
 
 > Foi aberto o sati 144498 para solicitar o log onde foi verificada a falha. Foi necessário implantar o comp_drci do ambiente de homologação para produção. Porém é muito importante verificar a causa raiz do problema pois nos parece que houve falta de atualização durante o processo de integração contínua, ou por falha de comunicação o falta de passagem do código fonte da fábrica para o nosso fork. Encontramos este merge request com bastantes mudanças que pode ser usado como origem de estudo: <http://git.mj.gov.br/CGTI-DIPROS-LEGADO/COMP-DRCI/merge_requests/33/diffs>
 
