@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5275-Portal Aberta.html</title>
+<style>
+* {
+    overflow: visible !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    box-decoration-break: clone;
+}
+
+html, body {
+    background: #FFF;
+    font-family: "Segoe UI", Arial, freesans, sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #333;
+    word-wrap: break-word;
+	hyphens: auto;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 4px solid #EEE;
+}
+
+code {
+    padding: .1em .4em;
+    display: inline-block;
+    background-color: #f9f2f4;
+    color: #c7254e;
+    border-radius: 3px;
+    border: 0 none;
+    font: 9px Consolas, "Liberation Mono", Menlo, "Courier New", Courier, monospace;
+    hyphens: manual;
+}
+
+pre code {
+    padding: 15px;
+    display: block;
+    background-color: #F9F9F9;
+    color: #555;
+    font-size: 10px;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .08);
+    word-wrap: normal;
+}
+
+/* replace light background for some hljs themes */
+code.github-css,
+code.github-gist-css,
+code.tomorrow-css,
+code.default-css,
+code.googlecode-css,
+code.ascetic-css,
+code.color-brewer-css,
+code.grayscale-css,
+code.idea-css,
+code.vs-css,
+code.xcode-css {
+    background-color: #F9F9F9 !important;
+}
+
+blockquote {
+    padding: 10px;
+    margin-left: 0;
+    color: #666;
+    border: 0 none;
+    border-left: 4px solid #EEE;
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #FFF;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #DDD;
+}
+
+table div {
+    page-break-inside: avoid;
+}
+
+th, td {
+    text-align: left;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    padding: 8px 14px;
+    vertical-align: top;
+    border-top: 1px solid #DDD;
+}
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+
+table > tbody + tbody {
+    border-top: 2px solid #DDD;
+}
+
+table table {
+    background-color: #FFF;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    border: 1px solid #DDD;
+}
+
+table > thead > tr > th,
+table > thead > tr > td {
+    border-bottom-width: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 90%;
+}
+
+table > tbody > tr:nth-of-type(odd) {
+    background-color: #F9F9F9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1.1;
+    color: #111;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+    page-break-after: avoid;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 11px;
+}
+
+h5, h6 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+    position: relative;
+    bottom: 1px;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+ul li,
+ol li {
+    margin-bottom: 2px;
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #4078C0;
+}
+
+.new-page,
+.page-break,
+.next-page,
+.page-end {
+    page-break-before: always;
+}
+
+#pageHeader,
+#pageHeader a,
+#pageHeader a:visited {
+    color: #777;
+}
+
+#pageHeader span {
+    vertical-align: middle;
+}
+
+#pageFooter {
+    border-top: 1px solid #EEE;
+    padding-top: 5px;
+    color: #777;
+    font-size: 80%;
+}
+#pageFooter a,
+#pageFooter a:visited {
+    color: #777;
+}
+
+/**
+ * Your markdown-themeable-pdf custom styles
+ *
+ * The default file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/templates
+ * The base css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/css
+ * The current highlight.js css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/node_modules/highlight.js/styles
+ */
+
+/*
+html, body {
+	color: red;
+}
+*/
+
+/* Base16 Atelier Cave Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/cave) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Cave Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #7e7887;
+}
+
+/* Atelier-Cave Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-regexp,
+.hljs-link,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #be4678;
+}
+
+/* Atelier-Cave Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #aa573c;
+}
+
+/* Atelier-Cave Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #2a9292;
+}
+
+/* Atelier-Cave Blue */
+.hljs-title,
+.hljs-section {
+  color: #576ddb;
+}
+
+/* Atelier-Cave Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #955ae7;
+}
+
+.hljs-deletion,
+.hljs-addition {
+  color: #19171c;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #be4678;
+}
+
+.hljs-addition {
+  background-color: #2a9292;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #19171c;
+  color: #8b8792;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+pre { white-space: pre-wrap !important; word-break: break-word !important; overflow: hidden !important;}
+</style>
+</head>
+<body>
+<div id="pageContent">
+<h1 id="portal-aberta">Portal Aberta</h1>
+<h1 id="etapa-1-levantamento-das-informacoes">Etapa 1 - Levantamento das Informações</h1>
+<ul>
+<li>Conforme Plano de Implantação anexo a demanda:
+<ul>
+<li>
+<p>Ambiente de desenvolvimento externo:  <a href="http://www.dev.nute.ufsc.br">www.dev.nute.ufsc.br</a></p>
+</li>
+<li>
+<p>Versão do PHP: 7.0.14</p>
+</li>
+<li>
+<p>Banco de dados&gt; MySQL 5.7.16</p>
+</li>
+<li>
+<p>SO Atual: Ubutntu 16.04.1 LTS</p>
+</li>
+<li>
+<p>Informações Adicionais:</p>
+<ul>
+<li>Apache 2.4.x + módulos:
+<ul>
+<li>mod_headers</li>
+<li>mod_deflate</li>
+<li>mod_setenvif</li>
+<li>mod_headers</li>
+<li>mod_filter</li>
+<li>mod_expires</li>
+<li>mod_rewrite</li>
+<li>mod_negotiation</li>
+</ul>
+</li>
+<li>PHP 7.0.x + módulos:
+<ul>
+<li>ctype</li>
+<li>dom</li>
+<li>exif</li>
+<li>fileinfo</li>
+<li>gd</li>
+<li>gettext</li>
+<li>iconv</li>
+<li>json</li>
+<li>mbstring</li>
+<li>mysqli</li>
+<li>pdo</li>
+<li>pdo_mysqli</li>
+<li>phar</li>
+<li>simplexml</li>
+<li>tokenizer</li>
+<li>zip</li>
+<li>openssl</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Alterações para cada ambiente:</p>
+<ul>
+<li>Arquivo .env:</li>
+</ul>
+<pre><code class="hljs atelier-cave-dark-css conf">    APP_ENV=production
+    APP_KEY=base64:OefnwLUDAfunD7VyjkHr0wLAG8DIcNOralJ8M+GOPSA=
+    APP_DEBUG=false
+    APP_DEBUG_SQL=false
+    APP_LOG=daily
+    APP_LOG_LEVEL=warning
+    APP_URL=http://www.aberta.senad.gov.br
+
+    DB_HOST=10.10.28.11
+    DB_PORT=3306
+    DB_DATABASE=porta_senad_dev
+    DB_USERNAME=sisportalsenad
+    DB_PASSWORD=mj1234
+
+    BROADCAST_DRIVER=log
+    CACHE_DRIVER=file
+    SESSION_DRIVER=file
+    QUEUE_DRIVER=sync
+
+    REDIS_HOST=127.0.0.1
+    REDIS_PASSWORD=null
+    REDIS_PORT=6379
+
+    MAIL_DRIVER=smtp
+    MAIL_HOST=
+    MAIL_PORT=587
+    MAIL_USERNAME=
+    MAIL_PASSWORD=
+    MAIL_ENCRYPTION=tls
+    MAIL_FROM_ADDRESS=aberta.senad@mj.gov.br
+    MAIL_FROM_NAME=&quot;Portal Aberta&quot;
+
+    SESSION_COOKIE=senad_aberta
+    SESSION_DOMAIN=www.aberta.senad.gov.br
+</code></pre>
+<ul>
+<li>Executar &quot;php composer.phar install --no-dev&quot; a partir da raiz do projeto</li>
+<li>Extrair o arquivo &quot;medias.zip&quot; (<a href="https://www.dropbox.com/s/v7heijcjkzpzqok/medias.zip?dl=0">https://www.dropbox.com/s/v7heijcjkzpzqok/medias.zip?dl=0</a>) em &quot;public/medias/</li>
+<li>Verificar se o DocumentRoot do Virtual Host esta configurado para  &quot;Build/codigos_fonte/public e reiniciar o apache</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="acoes-por-parte-de-gcm">Ações por parte de GCM</h2>
+<h3 id="aguardando-infraestrutura">Aguardando Infraestrutura</h3>
+<ul>
+<li>✔ SATI [152598][27-03-2017]Consolidação das informações em repositórios externos @paralyzed(2017-03-27 15:24) @done(2017-03-29 11:56)
+![Compartilhamento DropBox](images/2017/03/Evidência - 2017-03-27-151619-MJ-135483.png)</li>
+<li>✔ SATI[152583][27-03-2017]Levantamento das informações do ambiente de produção @paralyzed(2017-03-27 15:01) @done(2017-03-29 11:56)</li>
+<li>❄ SATI 153000  para replicação ou criação do ambiente de desenvolvimento @paralyzed(2017-03-29 12:04)</li>
+</ul>
+<h1 id="etapa-2-replicacao-de-ambiente">Etapa 2 - Replicação de ambiente</h1>
+<p>Será necessário a validação da equipe de infra para execução do PHP 7 e PHP 5 no mesmo ambiente.</p>
+<ul>
+<li>☐ Criação de Job’s Jenkins para execução em ambiente de desenvolvimento</li>
+<li>☐ Ajustes da aplicação para deploy via Jenkins e teste do ambiente</li>
+<li>☐ Finalização do Pipeline Jenkins</li>
+</ul>
+
+</div></body>
+</html>

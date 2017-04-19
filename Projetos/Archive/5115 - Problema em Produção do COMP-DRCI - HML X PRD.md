@@ -1,18 +1,19 @@
+
 # Redmine 5115
 
 ## Problema em Produção do COMP-DRCI - HML X PRD
 
 **Problema:**
 
-> Por gentileza, emitir parecer técnico para o caso referente ao SATI 143553 e o 144529\. Ao subirmos o deploy para produção através do sati 143553 , o sistema gerou o incidente que gerou sati 144529.
+> Por gentileza, emitir parecer técnico para o caso referente ao SATI 143553 e o 144529. Ao subirmos o deploy para produção através do sati 143553 , o sistema gerou o incidente que gerou sati 144529.
 
 > Foi aberto o sati 144498 para solicitar o log onde foi verificada a falha. Foi necessário implantar o comp_drci do ambiente de homologação para produção. Porém é muito importante verificar a causa raiz do problema pois nos parece que houve falta de atualização durante o processo de integração contínua, ou por falha de comunicação o falta de passagem do código fonte da fábrica para o nosso fork. Encontramos este merge request com bastantes mudanças que pode ser usado como origem de estudo: <http://git.mj.gov.br/CGTI-DIPROS-LEGADO/COMP-DRCI/merge_requests/33/diffs>
 
 ## Análise da Demanda
 
-## 1\. Análise dos SATIS Informados
+## 1. Análise dos SATIS Informados
 
-### 1.1\. Informações das Solicitações:
+### 1.1. Informações das Solicitações:
 
 SATI   | Data Abertura       | Data de Resolvido   | Solicitante                       | Executor                    | Solicitação
 ------ | ------------------- | ------------------- | --------------------------------- | --------------------------- | -------------------------------------------------
@@ -20,7 +21,7 @@ SATI   | Data Abertura       | Data de Resolvido   | Solicitante                
 144498 | 07/02/2017 10:18:44 | 07/02/2017 10:30:36 | Aparecido Santana Rosa, Gabriel   | Sousa Figueredo, Nayara     | Solicitação de logs
 144529 | 07/02/2017 11:35:44 | 14/02/2017 11:57:35 | Emanuel da S. Nascimento, Walbert | Alves Romão Neto, Francisco | Deploy de componente
 
-#### 1.1.1\. Entendimento da Solicitação:
+#### 1.1.1. Entendimento da Solicitação:
 
 - SATI 143553: Solicitação de Deploy da aplicação em ambiente de Produção com execução de Alteração em banco de dados:
 
@@ -29,7 +30,7 @@ SATI   | Data Abertura       | Data de Resolvido   | Solicitante                
 
 - SATI 144529: Solicitação de Deploy do Componente MJCompDRCI.jar no diretório do Servidor.
 
-#### 1.1.2\. Análise das solicitações:
+#### 1.1.2. Análise das solicitações:
 
 - SATI 143553: O prenchimento de informações se encontram fora do padrão. No mesmo SATI existe a solicitação de deploy em produção e alteração de banco de dados, mas não está claro o deploy a ser feito em produção, apenas o pedido para preenchimento da configuração do job no java.jenkins.mj.gov.br
 
@@ -37,7 +38,7 @@ SATI   | Data Abertura       | Data de Resolvido   | Solicitante                
 
 - SATI 144529: O preenchimento de informações se encontram fora do padrão. No SATI é requerido que se faça o deploy do componente MJCompDRCI.jar em diretório específico(/opt/jboss-4.2.3.GA/server/sgdrci/deploy/mj/03comp/). Essa solicitação no resumo aponta o ambiente de Produção e ao indicar o diretório informa os ambientes de homologação e produção
 
-#### 1.1.3\. Análise das soluções:
+#### 1.1.3. Análise das soluções:
 
 - SATI 143553: Existe a evidência de que os scripts foram executados com sucesso e no anexo existe a evidência que sustenta tal execução. Não há evidência da execução de deploy da aplicação e nem relacionamento com outros SATIS
 
@@ -45,7 +46,7 @@ SATI   | Data Abertura       | Data de Resolvido   | Solicitante                
 
 - SATI 144529: Existe a evidência de que o arquivo solicitado para o componente foi realizado deploy nas máquinas de homologação e produção e no anexo existe a evidência que sustenta tal execução. Não há relacionamento com outros SATIS
 
-### 1.2\. Análise da atualização de código via git:
+### 1.2. Análise da atualização de código via git:
 
 Para atualização foram realizados merges para acompanhamento do código via Pipeline Jenkins:
 
@@ -55,7 +56,7 @@ Merge | Data Pedido      | Data Realização  | Origem           | Destino | Sta
 152   | 17/01/2017 21:40 | 17/01/2017 21:41 | GQUAL            | master  | Realizado | Walbert Emanuel da S. Nascimento | Walbert Emanuel da S. Nascimento
 153   | 31/01/2017 16:32 | 31/01/2017 18:35 | master           | stable  | Realizado | Walbert Emanuel da S. Nascimento | Allan Carlos Ramalho
 
-### 1.3\. Análise do deploy via Jenkins:
+### 1.3. Análise do deploy via Jenkins:
 
 - Deploy Via Pipeline Jenkins: Conforme imagem abaixo, o pipeline que foi executado no dia 06/02/2017 19:28:56 realizando o deploy em ambiente de desenvolvimento eliminou o pipeline que executou o deploy em produção:
 

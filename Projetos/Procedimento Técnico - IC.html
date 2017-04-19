@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Procedimento Técnico - IC.html</title>
+<style>
+* {
+    overflow: visible !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    box-decoration-break: clone;
+}
+
+html, body {
+    background: #FFF;
+    font-family: "Segoe UI", Arial, freesans, sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #333;
+    word-wrap: break-word;
+	hyphens: auto;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 4px solid #EEE;
+}
+
+code {
+    padding: .1em .4em;
+    display: inline-block;
+    background-color: #f9f2f4;
+    color: #c7254e;
+    border-radius: 3px;
+    border: 0 none;
+    font: 9px Consolas, "Liberation Mono", Menlo, "Courier New", Courier, monospace;
+    hyphens: manual;
+}
+
+pre code {
+    padding: 15px;
+    display: block;
+    background-color: #F9F9F9;
+    color: #555;
+    font-size: 10px;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .08);
+    word-wrap: normal;
+}
+
+/* replace light background for some hljs themes */
+code.github-css,
+code.github-gist-css,
+code.tomorrow-css,
+code.default-css,
+code.googlecode-css,
+code.ascetic-css,
+code.color-brewer-css,
+code.grayscale-css,
+code.idea-css,
+code.vs-css,
+code.xcode-css {
+    background-color: #F9F9F9 !important;
+}
+
+blockquote {
+    padding: 10px;
+    margin-left: 0;
+    color: #666;
+    border: 0 none;
+    border-left: 4px solid #EEE;
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #FFF;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #DDD;
+}
+
+table div {
+    page-break-inside: avoid;
+}
+
+th, td {
+    text-align: left;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    padding: 8px 14px;
+    vertical-align: top;
+    border-top: 1px solid #DDD;
+}
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+
+table > tbody + tbody {
+    border-top: 2px solid #DDD;
+}
+
+table table {
+    background-color: #FFF;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    border: 1px solid #DDD;
+}
+
+table > thead > tr > th,
+table > thead > tr > td {
+    border-bottom-width: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 90%;
+}
+
+table > tbody > tr:nth-of-type(odd) {
+    background-color: #F9F9F9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1.1;
+    color: #111;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+    page-break-after: avoid;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 11px;
+}
+
+h5, h6 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+    position: relative;
+    bottom: 1px;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+ul li,
+ol li {
+    margin-bottom: 2px;
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #4078C0;
+}
+
+.new-page,
+.page-break,
+.next-page,
+.page-end {
+    page-break-before: always;
+}
+
+#pageHeader,
+#pageHeader a,
+#pageHeader a:visited {
+    color: #777;
+}
+
+#pageHeader span {
+    vertical-align: middle;
+}
+
+#pageFooter {
+    border-top: 1px solid #EEE;
+    padding-top: 5px;
+    color: #777;
+    font-size: 80%;
+}
+#pageFooter a,
+#pageFooter a:visited {
+    color: #777;
+}
+
+/**
+ * Your markdown-themeable-pdf custom styles
+ *
+ * The default file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/templates
+ * The base css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/css
+ * The current highlight.js css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/node_modules/highlight.js/styles
+ */
+
+/*
+html, body {
+	color: red;
+}
+*/
+
+/* Base16 Atelier Cave Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/cave) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Cave Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #7e7887;
+}
+
+/* Atelier-Cave Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-regexp,
+.hljs-link,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #be4678;
+}
+
+/* Atelier-Cave Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #aa573c;
+}
+
+/* Atelier-Cave Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #2a9292;
+}
+
+/* Atelier-Cave Blue */
+.hljs-title,
+.hljs-section {
+  color: #576ddb;
+}
+
+/* Atelier-Cave Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #955ae7;
+}
+
+.hljs-deletion,
+.hljs-addition {
+  color: #19171c;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #be4678;
+}
+
+.hljs-addition {
+  background-color: #2a9292;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #19171c;
+  color: #8b8792;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+pre { white-space: pre-wrap !important; word-break: break-word !important; overflow: hidden !important;}
+</style>
+</head>
+<body>
+<div id="pageContent">
+<h1 id="procedimento-tecnico-integracao-continua">Procedimento Técnico - Integração Contínua</h1>
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<ul>
+<li><a href="#procedimento-tcnico-integrao-contnua">Procedimento Técnico - Integração Contínua</a>
+<ul>
+<li><a href="#2-ferramentas-envolvidas">2. Ferramentas envolvidas</a></li>
+<li><a href="#3-fluxo-de-trabalho">3. Fluxo de Trabalho</a>
+<ul>
+<li><a href="#31-configuraes-das-ferramentas">3.1. Configurações das Ferramentas</a>
+<ul>
+<li><a href="#git">git</a></li>
+<li><a href="#git-template">git template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#usrbinenv-bash">!/usr/bin/env bash</a></li>
+<li><a href="#set-this-to-your-active-development-branch">set this to your active development branch</a></li>
+<li><a href="#regex-to-validate-in-commit-msg">regex to validate in commit msg</a>
+	- <a href="#32-realizao-do-merge-request">3.2. Realização do Merge Request</a>
+<ul>
+<li><a href="#4-observaes">4. Observações</a>
+<ul>
+<li><a href="#42-melhorias-a-implementar">4.2. Melhorias a implementar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="1-objetivo">1. Objetivo</h2>
+<blockquote>
+<p>Descrição de atividades a serem executadas por parte dos envolvidos no processo de entrega de código, build e deploy nas ferramentas git e jenkins.</p>
+</blockquote>
+<h2 id="2-ferramentas-envolvidas">2. Ferramentas envolvidas</h2>
+<blockquote>
+<p>O acesso as ferramentas é por intermédio do usuário e senha de rede vinculados aos grupos de domínio da CGTI.</p>
+</blockquote>
+<ul>
+<li>
+<p>Construção e Deploy de aplicação</p>
+<ul>
+<li>Jenkins para Projetos <strong>Java</strong>: <a href="http://java.jenkins.mj.gov.br/" title="Java Jenkins">http://java.jenkins.mj.gov.br/</a></li>
+<li>Jenkins para Projetos <strong>PHP</strong>:<a href="http://php.jenkins.mj.gov.br/" title="PHP Jenkins">http://php.jenkins.mj.gov.br/</a></li>
+</ul>
+</li>
+<li>
+<p>Versionamento de código</p>
+<ul>
+<li>GIT: <a href="http://git.mj.gov.br/" title="GitLab MJ">http://git.mj.gov.br/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-fluxo-de-trabalho">3. Fluxo de Trabalho</h2>
+<blockquote>
+<p>Abaixo segue representado Graficamente o fluxo de trabalho para integração contínua:</p>
+</blockquote>
+<p><img src="../images/2017/03/Fluxo.png" alt="Fluxo IC"></p>
+<ol>
+<li><span style="color:#004080"> <strong>[Desenvolvedor]</strong> </span> Realiza alterações diretamente no <strong>banco de dados de desenvolvimento</strong> por meio da execução de <strong>scripts</strong>;</li>
+<li><span style="color:#004080"> <strong>[Desenvolvedor]</strong> </span> Realiza a entrega do código fonte e scripts de banco de dados no repositório, no branch definido para entrega(<strong>master</strong>) no <strong>fork da própria empresa</strong>;</li>
+<li><span style="color:#008040"> <strong>[Ferramenta IC]</strong> </span> Por meio do processo <strong>Automático</strong>(<strong>A</strong>) realiza o deploy da aplicação em ambiente de <strong>desenvolvimento</strong>;</li>
+<li><span style="color:#004080"> <strong>[Desenvolvedor]</strong> </span> Valida alterações no ambiente de <strong>desenvolvimento</strong>, realiza o <em><strong>merge request</strong></em> para o fork da <strong>CGTI</strong> no branch definido(<strong>GQUAL</strong>), realiza a marcação de <em><strong>tag</strong></em> de versionamento;</li>
+<li><span style="color:#004080"> <strong>[Desenvolvedor]</strong> </span> Realiza abertura de <strong>SATI</strong> para a equipe de <strong>Infraestrutura</strong> executar alterações no <strong>banco de dados de teste</strong>;</li>
+<li><span style="color:#800101"> <strong>[Infraestutura]</strong> </span> Realiza alterações diretamente no <strong>banco de dados de teste</strong> por meio da execução de <strong>scripts</strong>;</li>
+<li><span style="color:#004080"> <strong>[Desenvolvedor]</strong> </span> Realiza aprovação do <strong>Job <em>DB changes de teste</em></strong> após confirmação de execução do <strong>SATI</strong>, informando o número do <strong>SATI</strong> que realizou a alteração no <strong>banco de dados de teste</strong>;</li>
+<li><span style="color:#008040"> <strong>[Ferramenta IC]</strong> </span> Por meio do processo <strong>Automático</strong>(<strong>B</strong>) realiza o deploy da aplicação em ambiente de <strong>Teste</strong>;</li>
+<li><span style="color:#0080FF"> <strong>[Analista de Teste]</strong> </span> Realiza a aprovação do <strong>Job <em>Functional Test</em></strong>, informando evidências dos testes executados;</li>
+<li><strong>[Gerente de Projeto]</strong> Realiza o <em><strong>merge request</strong></em> para o fork da <strong>CGTI</strong> no branch definido(<strong>master</strong>);</li>
+<li><strong>[Gerente de Projeto]</strong> Realiza abertura de <strong>SATI</strong> para a equipe de <strong>Infraestrutura</strong> executar alterações no <strong>banco de dados de homologação</strong>;</li>
+<li><span style="color:#800101"> <strong>[Infraestutura]</strong> </span> Realiza alterações diretamente no <strong>banco de dados de homologação</strong> por meio da execução de <strong>scripts</strong>;</li>
+<li><span style="color:#800101"> <strong>[Infraestutura]</strong> </span> Realiza aprovação do <strong>Job <em>DB changes de homologação</em></strong> após confirmação de execução do <strong>SATI</strong>, informando o número do <strong>SATI</strong> que realizou a alteração no <strong>banco de dados de homologação</strong>;</li>
+<li><span style="color:#008040"> <strong>[Ferramenta IC]</strong> </span> Por meio do processo <strong>Automático</strong>(<strong>B</strong>) realiza o deploy da aplicação em ambiente de <strong>Homologação</strong>;</li>
+<li><strong>[Gerente de Projeto]</strong> Realiza aprovação do <strong>Job <em>Acceptance test de homologação</em></strong> após homologação do solicitante, informando o número do <strong>Processo SEI</strong> com a evidência do <strong>Aceite da demanda</strong>;</li>
+<li><strong>[Gerente de Projeto]</strong> Realiza o <em><strong>merge request</strong></em> para o fork da <strong>CGTI</strong> no branch definido(<strong>stable</strong>);</li>
+<li><strong>[Gerente de Projeto]</strong> Realiza abertura de demanda no <strong>Projetos CGTI</strong> para <strong>Auditoria</strong></li>
+<li><span style="color:#FF8001"> <strong>[Gerente de Configuração e Mudança]</strong> </span> Realiza aprovação do <strong>Job <em>Check-list de produção</em></strong> após execução da <strong>Auditoria</strong>, informando o número da <strong>Demanda</strong>;</li>
+<li><span style="color:#FF8001"> <strong>[Gerente de Configuração e Mudança]</strong> </span> Informa dados para o deploy em <strong>produção</strong>;</li>
+<li><strong>[Gerente de Projeto]</strong> Realiza abertura de <strong>SATI</strong> para a equipe de <strong>Infraestrutura</strong> executar alterações no <strong>banco de dados de produção</strong> e realizar a aplicação de alterações em ambiente de <strong>produção</strong>;</li>
+<li><span style="color:#800101"> <strong>[Infraestutura]</strong> </span> Realiza alterações diretamente no <strong>banco de dados de produção</strong> por meio da execução de <strong>scripts</strong> após realização de backup;</li>
+<li><span style="color:#800101"> <strong>[Infraestutura]</strong> </span> Realiza aprovação do <strong>Job _DB changes de produção</strong> após confirmação de execução do <strong>SATI</strong>, informando o número do <strong>SATI</strong> que realizou a alteração no <strong>banco de dados de produção</strong>;</li>
+<li><span style="color:#008040"> <strong>[Desenvolvedor]</strong> </span> Por meio do processo <strong>Automático</strong>(<strong>B</strong>) realiza o deploy da aplicação em ambiente de <strong>Produção</strong>.</li>
+</ol>
+<p>A. Processo iniciado pelo gatilho de alterações de código em <strong>Branch</strong> pré-determinada</p>
+<p>B. Processo iniciado pelo gatilho de aprovação de outro <strong>Job Jekins</strong></p>
+<h3 id="31-configuracoes-das-ferramentas">3.1. Configurações das Ferramentas</h3>
+<h4 id="git">git</h4>
+<p>A configuração do Git para o usuário, após a instalação deve ser a identificação do mesmo:</p>
+<pre><code class="hljs atelier-cave-dark-css bash">$ git config --global user.name “Seu Nome”
+
+$ git config --global user.email “seu@email.com”
+
+</code></pre>
+<p>Essa configuração deve ser conforme o usuário LDAP já cadastrado na ferramenta GitLab previamente</p>
+<blockquote>
+<p>Exemplo:</p>
+<p><img src="../images/2017/03/config-git.gif" alt="Config git"></p>
+</blockquote>
+<h4 id="git-template">git template</h4>
+<p>Para melhorar a qualidade e poder haver rastreabilidade, o desenvolvedor deve criar no seu diretório de usuário os diretórios <em><strong>.git-templates\hooks</strong></em> e criar no diretório o arquivo commit-msg com o seguinte conteúdo:</p>
+<pre><code class="hljs atelier-cave-dark-css bash"><span class="hljs-meta">#!/usr/bin/env bash
+</span>
+<span class="hljs-comment"># set this to your active development branch</span>
+
+<span class="hljs-comment"># regex to validate in commit msg</span>
+commit_regex=<span class="hljs-string">'(SATI [0-9]+ - [a-zA-Z|0-9|.|,|\-| ]{1,120}|Redmine [0-9]+ - [a-zA-Z|0-9|.|,|\-| ]{1,120}|Issue #[0-9]+ - [a-zA-Z|0-9|.|,|\-| ]{1,120}|OS ([0-9|]+|[X][X][X][X]) - [a-zA-Z|0-9|.|,|\-| ]{1,120}|e-mail\([a-zA-Z|0-9|.]+@[a-zA-Z|0-9|.]+\) - [a-zA-Z|0-9|.|,|\-| ]{1,120})'</span>
+error_msg=<span class="hljs-string">"Erro na validacao de expressao regular"</span>
+
+<span class="hljs-keyword">if</span> ! grep -iqE <span class="hljs-string">"<span class="hljs-variable">$commit_regex</span>"</span> <span class="hljs-string">"<span class="hljs-variable">$1</span>"</span>; <span class="hljs-keyword">then</span>
+
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"------------------------------- ------------------------------------"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"------------------------------- ------------------------------------"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"|      Erro ao realizar commit. Sua Mensagem de Commit deve        |"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"|       obedecer a um dos seguintes padrões, conforme GCM:         |"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"|  Issue do GitLab: 'Issue #1234 - Descricao ate 120 caracteres'   |"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"|  Issue do Redmine: 'Redmine 1234 - Descricao ate 120 caracteres' |"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"|       OS MJ : 'OS 1234 - Descricao ate 120 caracteres'           |"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"|       SATI: 'SATI 1234 - Descricao ate 120 caracteres'           |"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"|e-mail: 'e-mail(email@dominio.com) - Descricao ate 120 caracteres'|"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"------------------------------- ------------------------------------"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"------------------------------- ------------------------------------"</span>
+	<span class="hljs-built_in">echo</span> <span class="hljs-string">"<span class="hljs-variable">$error_msg</span>"</span> &gt;&amp;2
+    <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Esse procedimento faz com que a mensagem de commit siga uma padrão e garante que será possível identificar a que demanda são as alterações relacionadas ao commit.</p>
+<h3 id="32-realizacao-do-merge-request">3.2. Realização do Merge Request</h3>
+<p>Para poder melhorar o versionamento e a geração de Changelogs no momento de realizar o <em><strong>merge request</strong></em> descrito no <strong>passo 4 do fluxo de trabalho</strong> é importante que no título do merge request conste a mensagem com o padrão abaixo:</p>
+<blockquote>
+<p>V«MAIOR».«MENOR».«MICRO» - «Informação da demanda»</p>
+</blockquote>
+<p>O esquema de numeração de versões adotado é baseado no esquema adotado pela organização Apache Foundation, definindo que uma versão é composta por quatro números inteiros, sendo que a alteração desses números segue o critério:</p>
+<ul>
+<li>MAIOR: Existe modificação na estrutura de dados ou na arquitetura do sistema, incremental;</li>
+<li>MENOR: Existe modificação na inclusão de um ou mais conjuntos de novas funcionalidades. Inicia com zero (zero) e deve ser reiniciado sempre que houver a troca da versão maior;</li>
+<li>MICRO: Existe correção de erros ou correção de comportamentos esperados no sistema. Inicia com zero (zero) e deve ser reiniciado sempre que houver a troca da versão maior ou da versão menor.</li>
+</ul>
+<blockquote>
+<p>Exemplo:</p>
+<p><img src="../images/2017/03/merge-request.gif" alt="Merge Request"></p>
+</blockquote>
+<h2 id="4-observacoes">4. Observações</h2>
+<h3 id="42-melhorias-a-implementar">4.2. Melhorias a implementar</h3>
+<ol>
+<li>Versionamento realizado na entrega para a CGTI;
+<ul>
+<li>Com a aplicação da TAG de Versionamento na entrega pela equipe de desenvolvimento é possível fazer com que o gatilho das construções automatizadas na ferramenta de integração contínua seja disparado a partir de uma determinada versão;</li>
+<li>O pipeline executado fica disponível para a versão entregue, podendo evidenciar o histórico de execução da versão do projeto;</li>
+<li>Garante que toda entrega, mesmo que não finalizada, seja versionada garantindo assim o rollback no projeto;</li>
+<li>Redução na quantidade de pipelines criados liberando recursos na Ferramenta IC;</li>
+<li>A partir do Versionamento é possível contruir a aplicação apontando no código fonte a versão da mesma e permitindo a gestão do pacote binário com a mesma numeração.</li>
+</ul>
+</li>
+<li>Eliminação da necessidade de Fork para as empresas no repositório
+<ul>
+<li>Diminuição nos conflitos de Merge;</li>
+<li>Força o rebase por parte da equipe para entrega de novo artefato;</li>
+<li>Liberação de recursos no repositório, como espaço e processamento.</li>
+</ul>
+</li>
+</ol>
+
+</div></body>
+</html>

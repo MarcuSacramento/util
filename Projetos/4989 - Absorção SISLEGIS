@@ -10,6 +10,56 @@ SATI 148848 Solicitação de Backup de war
 SATI 148850 Liberação de rede e DNS para console
 SATI 152066 Liberação de rede para download de pacotes Bower
 
+SATI 148850-Disponibilização de DNS para Console
+SATI 148848-Recuperar WAR de produção
+SATI 148173-Liberação de Rede
+SATI 148925-liberação de porta no ambiente de produção
+SATI 149060-Disponibilização de DNS para Console
+
+SATI 155232- Replicação de configuração em DSV
+SATI 153051-Falha de conexão com servidor remoto durante build
+SATI 152066-Falha na Construção do Frontend
+SATI 147599-Liberação de Rede
+
+SATI 148924-liberação de regra de firewall ambiente homologação
+SATI 148922-liberação de regra de firewall ambiente teste
+SATI 148921-liberação de regra de firewall ambiente desenvolvimento
+SATI 147593-Configurações de Proxy
+SATI 147080-Criação de acesso ao ambiente de teste.
+SATI 147078-Criação de usuário no ambiente de homologação.
+SATI 147019-Provisionamento entrada no DNS
+SATI 147017-Provisionamento entrada no DNS
+SATI 146679-Provisionamento de Ambientede homologação
+SATI 146677-Provisionamento de Ambiente de Teste
+SATI 146561-Provisionamento de Ambientede homologação
+SATI 146556-Provisionamento de Ambiente de Teste
+SATI 145987-Novo apontamento no proxyReverso
+SATI 145983-Usuário de acesso ao servidor de desenvolvimento.
+SATI 145978-Exclusão de entrada no DNS e ProxyReverso
+SATI 145831-Clone de servidor
+SATI 145827-Servidor de teste e homologação.
+SATI 145117-Provisionamento de Novo Ambiente
+
+
+Redmine 5361-Auditoria dos SATIs 145342, 150356 e 152351
+Redmine 5117-Repasse Sislegis
+Redmine 5075-Análise da aplicação SISLEGIS
+SATI 148850-Disponibilização de DNS para Console
+SATI 148848-Recuperar WAR de produção
+SATI 148173-Liberação de Rede
+SATI 148925-liberação de porta no ambiente de produção
+SATI 149060-Disponibilização de DNS para Console
+
+155453-Configuração de Jobs
+155451-Preenchimento de informações JOB Jenkins
+155232-Replicação de configuração em DSV
+
+
+
+
+
+/home/sislegis/sislegis-ambiente/projetos/app_frontend_jenkins
+
 Desenvolvimento:
 Servidor: 10.10.4.47
 Usuário: usr-dsv-mj ( usuário sudo)
@@ -51,3 +101,32 @@ favor verificar as permissões do usuário Jenkins do ambiente java.jenkins.
 
 npm install bower@1.8.0
 npm install gulp@3.9.1
+
+
+Groups for user :jenkins
++ npm config set proxy http://proxy.mj.gov.br:3128
++ npm config set http-proxy http://proxy.mj.gov.br:3128
++ npm config set https-proxy http://proxy.mj.gov.br:3128
++ npm config set ftp-proxy http://proxy.mj.gov.br:3128
++ bower register minimatch https://github.com/isaacs/minimatch
+bower minimatch#*              resolve https://github.com/isaacs/minimatch#*
+bower minimatch#*             download https://github.com/isaacs/minimatch
+bower minimatch#*                retry Download of https://github.com/isaacs/minimatch failed with ETIMEDOUT, retrying in 1.7s
+
+
+Groups for user :jenkins
++ npm config set proxy http://proxy.mj.gov.br:3128
++ npm config set http-proxy http://proxy.mj.gov.br:3128
++ npm config set https-proxy http://proxy.mj.gov.br:3128
++ npm config set ftp-proxy http://proxy.mj.gov.br:3128
++ wget https://github.com/isaacs/minimatch
+--2017-03-29 15:01:17--  https://github.com/isaacs/minimatch
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... failed: Connection timed out.
+Connecting to github.com (github.com)|192.30.253.112|:443... failed: Connection timed out.
+Retrying.
+
+
+
+155451 Chamado para alterar os usuários de aplicação para deploy em ambientes/ Configuração do Jenkins
+155453 Chamado para confirgurar o wildfly e atualizar os jobs de homologação e produção do backend
