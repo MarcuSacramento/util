@@ -15,19 +15,21 @@
 
 ## Priorizado:
 
-
-- ☐ REDMINE [08][27-03][5309]Apoio Técnico para Implantação do OCR-SERVER
-- ☐ REDMINE [09][27-03][5307]Apoio Técnico para Implementação da Ferramenta Kibana
-- ☐ REDMINE [10][27-03][4819]Treinamento GIT para a CGSIS
-- ☐ REDMINE [11][27-03][4821]Treinamento INTEGRAÇÃO CONTÍNUA para a CGSIS
+- ☐ REDMINE [01][02-05][5451]Apoio no projeto piloto do CMDB
+- ☐ REDMINE [02][02-05][5497]Apoio para criação de ambiente de produção para o Sistema de Ligações.
+- ☐ REDMINE [03][27-03][5309]Apoio Técnico para Implantação do OCR-SERVER
+- ☐ REDMINE [04][27-03][4819]Treinamento GIT para a CGSIS
+- ☐ REDMINE [05][27-03][4821]Treinamento INTEGRAÇÃO CONTÍNUA para a CGSIS
+- ☐ REDMINE [06][02-05][5525]CIVIS:Realizar auditoria - Recuperação Senha
 
 --------------------------------------------------------------------------------
 
 ## Ongoing Task:
-	- ☐ REDMINE [00][18-04][5317] Portal de Dados Abertos - Apoio Técnico para Absorção de Sistema @ongoing(2017-04-19 13:51)
+	- ☐ REDMINE [00][19-04][5443]Gestão de Release @ongoing(2017-05-03 11:28)
 --------------------------------------------------------------------------------
 
 ## Paralyzed:
+	- ❄ REDMINE [00][18-04][5317] Portal de Dados Abertos - Apoio Técnico para Absorção de Sistema @paralyzed(2017-04-20 10:34)
 	- ❄ REDMINE [98][27-03][4027]Limpeza" dos repositórios do Git @paralyzed(2017-03-24 13:54)
 --------------------------------------------------------------------------------
 

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# set this to your active development branch
+
+# regex to validate in commit msg
+commit_regex='(SATI [0-9]+ - [a-zA-Z|0-9|.|,|\-| ]{1,120}|Redmine [0-9]+ - [a-zA-Z|0-9|.|,|\-| ]{1,120}|Issue #[0-9]+ - [a-zA-Z|0-9|.|,|\-| ]{1,120}|OS ([0-9|]+|[X][X][X][X]) - [a-zA-Z|0-9|.|,|\-| ]{1,120}|e-mail\([a-zA-Z|0-9|.]+@[a-zA-Z|0-9|.]+\) - [a-zA-Z|0-9|.|,|\-| ]{1,120})'
+error_msg="Erro na validacao de expressao regular"
+
+if ! grep -iqE "$commit_regex" "$1"; then
+    
+	echo "------------------------------- ------------------------------------"
+	echo "------------------------------- ------------------------------------"
+	echo "|      Erro ao realizar commit. Sua Mensagem de Commit deve        |"
+	echo "|       obedecer a um dos seguintes padroes, conforme GCM:         |"
+	echo "|  Issue do GitLab: 'Issue #1234 - Descricao ate 120 caracteres'   |"
+	echo "|  Issue do Redmine: 'Redmine 1234 - Descricao ate 120 caracteres' |"
+	echo "|       OS MJ : 'OS 1234 - Descricao ate 120 caracteres'           |"
+	echo "|       SATI: 'SATI 1234 - Descricao ate 120 caracteres'           |"
+	echo "|e-mail: 'e-mail(email@dominio.com) - Descricao ate 120 caracteres'|"
+	echo "------------------------------- ------------------------------------"
+	echo "------------------------------- ------------------------------------"
+	echo "$error_msg" >&2
+    exit 1
+fi

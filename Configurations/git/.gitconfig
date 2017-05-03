@@ -1,0 +1,42 @@
+[user]
+	name = Marcus V. Cardoso do Sacramento
+	email = marcus.sacramento.terceirizado@mj.gov.br
+[gui]
+[merge]
+	verbosity = 4
+	summary = true
+	tool = diffmerge
+[http]
+	postBuffer = 52428800
+[alias]
+	logexport = log --date-order --date=iso --full-history --all --pretty=format:'%x08%x09%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset)%C(bold yellow)%d %C(reset)%s' --stat
+	logcsv = log --date-order --date=iso --full-history --all --pretty=format:'\"%x08%x09%C(red)%h\",\"%C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08\",\"%C(bold blue)%aN\",\"%C(reset)%C(bold yellow)%d\",\"%C(reset)%s\",'
+	logmvcs = log --date-order --date=iso --full-history --all --pretty=format:'%x08%x09%C(red)%h %C(cyan)%ad%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08%x08 %C(bold blue)%aN%C(reset)%C(bold yellow)%d %C(reset)%s'
+	logfile = log --date-order --date=iso --full-history --all --name-status --stat --oneline
+	listalias = config --get-regexp alias
+	ignored-files = ls-files -o -i --exclude-standard
+	
+[init]
+	templatedir = ~/.git-templates
+[commit]
+    template = ~/.git-templates/.gitmessage
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = C:/Ferramentas/diffmerge/sgdm.exe \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = diffmerge
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = C:/Ferramentas/diffmerge/sgdm.exe -merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" --title1="--ours:" --title2="Resultante:" --title3="--theirs:"
+[mergetool]
+    keepBackup = false
+[core]
+	#quotepath = off
+	editor="C:/Ferramentas/cmder/vendor/SublimeText3/sublime_text.exe"
+[i18n]
+	logoutputencoding = utf8
+	commitencoding = utf8
+
+#git config --global init.templatedir '~/.git-templates'
+#mkdir -p ~/.git-templates/hooks
